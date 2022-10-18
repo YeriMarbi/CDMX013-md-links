@@ -1,9 +1,6 @@
-import { pathExists, isAbsoluteRoute,  resolveAbsolute, readFile, } from'./md-links.js'
+import { } from'./md-links.js'
 
-pathExists ()
-isAbsoluteRoute()
-resolveAbsolute()
-readFile()
+
 
 // const mdLinks = require("md-links");
 

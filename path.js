@@ -1,7 +1,16 @@
 import path from 'node:path'
+import fs from 'fs'
 
-if (path.isAbsolute('./README.md') === false){
-    console.log(path.resolve('./README.md'));
-}else{
-    console.log('Nooo');
+const routes = './links.md';
+const AbsolutePath = () => {
+    fs.existsSync(routes);
+    if (fs.existsSync(routes) === true) {
+        console.log(fs.existsSync(routes));
+    }
+    if (path.isAbsolute(routes) === false) {
+        console.log(path.resolve(routes));
+    } else {
+        console.log('Es una ruta absoluta');
+    }
 }
+console.log(AbsolutePath(routes));
