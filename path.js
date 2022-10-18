@@ -13,4 +13,4 @@ const AbsolutePath = () => {
         console.log('Es una ruta absoluta');
     }
 }
-console.log(AbsolutePath(routes));
+AbsolutePath(routes)
