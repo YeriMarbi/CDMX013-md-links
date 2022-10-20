@@ -1,21 +1,17 @@
 import fs from 'fs'
-import path from 'node:path'
+
+  //Imprimir el contenido de un archivo
+  const fileRoute = fs.readFileSync("./README.md", "utf-8");//Leer el contenido de un archivo
+  // console.log(fileRoute);
 
 
-//Leer un archivo con una ruta 
-fs.readdir('./', (error, files)=>{
-  if(error){
-    throw error;
+//Extraer los links del archivo
+const extractLinks = () => {
+  const stringRoute = fileRoute.toString();
+  const regExp = /\[(.+)\]\((https?:\/\/.+)\)/gi;
+  let findLinks = [stringRoute.match(regExp)];
+  for (let i = 0; i < findLinks.length; i++) {
   }
-  console.log(files);
-  files.forEach(element => {
-    if( path.extname(element) === '.md') {
-      console.log(element);
-    }
-  });
-  const fileRoute = fs.readFileSync("./links.md", "utf-8");//Leer el contenido de un archivo
-  console.log(fileRoute);
-});
-
-
-
+  console.log(findLinks);
+}
+extractLinks();
