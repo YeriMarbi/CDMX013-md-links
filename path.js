@@ -13,7 +13,9 @@ const isAbsolutePath = (routes) => {
     } else {
         console.log('Es una ruta absoluta');
     }
-}
+};
+
+function readFileOrFolder = (routes) =>{ //leer una carpeta dentro de otra 
 fs.readdir('./', (error, files) => {
     if (error) {
       throw error;
@@ -24,4 +26,5 @@ fs.readdir('./', (error, files) => {
       }
     });
   });
+}
   isAbsolutePath(routes)
